@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Lista Produktów</title>
+</head>
+<body>
+<div class="content">
+    <h1>Wybierz jedną z kategorii aby wyświetlić listę produktów</h1>
+    <form action="/kategoria" method="get">
+        <div class="form-group">
+            <select name="cat" class="form-control" id="exampleFormControlSelect1">
+                <option value="all">Wszystkie</option>
+                <option value="DOMOWE">Art. gospodarstwa domowego</option>
+                <option value="SPOZYWCZE">Art. spożywcze</option>
+                <option value="INNE">Inne</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Szukaj</button>
+    </form>
+    </br>
+    </br>
+    <h1>Dodaj nowy produkt</h1>
+    <form action="/add" method="get">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Najpierw wybierz kategorię produktu</label>
+            <select name="cat" class="form-control" id="exampleFormControlSelect2">
+                <option value="DOMOWE">Art. gospodarstwa domowego</option>
+                <option value="SPOZYWCZE">Art. spożywcze</option>
+                <option value="INNE">Inne</option>
+            </select>
+        </div>
+        <input name="prodName" class="form-control" type="text" placeholder="Nazwa produktu">
+        <input name="prodPrice" class="form-control" type="text" placeholder="Cena">
+        </br>
+        <button type="submit" class="btn btn-primary">Dodaj</button>
+    </form>
+</div>
+</body>
+</html>
